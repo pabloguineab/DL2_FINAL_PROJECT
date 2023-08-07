@@ -6,7 +6,7 @@ This project implements an Accident Detection System that uses Convolutional Neu
 
 The detailed report for this project is available on [GitHub Pages](https://pabloguineab.github.io/DL2_FINAL_PROJECT/).
 
-To view each section of the report, double click on the name of the section in the navigation bar (navbar) on the website.
+To view each section of the report, <mark>double click</mark> on the name of the section in the navigation bar (navbar) on the website.
 
 ### Report Screenshot
 
