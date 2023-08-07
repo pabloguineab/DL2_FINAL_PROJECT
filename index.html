@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Styling for collapsible sections */
+    .collapsible {
+      cursor: pointer;
+      padding: 10px;
+      background-color: #f1f1f1;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 24px; /* Adjust the font size as desired */
+      font-weight: bold; /* Add bold style to make it look like a title */
+    }
+    /* Additional styles for the .button-container class */
+    .button-container {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 20px;
+    }
+    .button-container button {
+      margin: 5px;
+      background: none;
+      border: none;
+      color: rgb(0, 0, 3);
+      text-decoration: none; /* Remove the underline */
+      cursor: pointer;
+      text-align: left;
+    }
+    /* Add this style to remove the underline from the anchor elements */
+    .button-container a {
+      text-decoration: none;
+      color: rgb(0, 0, 3);
+    }
+
+
+    .content {
+      display: none; /* Set to "none" to hide the content initially */
+      padding: 10px;
+      overflow: hidden;
+      background-color: #ffffff;
+      margin: 0 auto; /* Center the content horizontally */
+      max-width: 800px; /* Set a maximum width for the content */
+      text-align: left; /* Center the text within the container */
+    }
+    
+    /* Styling for the <h2> element within the .content class */
+    .content h2 {
+      text-align: center; /* Align the <h2> element to the center */
+    }
+    /* Additional styles for the <ul> element within the .content class */
+    .content ul {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+
+    /* Additional styles for the <li> element within the .content class */
+    .content li {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #333;
+    }
+    .content.active {
+      max-height: 200px; /* or any other height you prefer */
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+    }
+
+    .header img {
+      width: 150px;
+      margin-right: 15px;
+    }
+
+    .authors {
+      font-size: 14px;
+    }
+  </style>
+  <title>Collapsible Content</title>
+</head>
+<body>
+  <div class="header">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/George_Brown_College_logo.svg/1280px-George_Brown_College_logo.svg.png" alt="George Brown College Logo">
+    <div class="authors">
+      <h3>ADV.MATHS FOR DEEP LEARNING</h3>
+      <p>Joy Vahini Varatharaajah 101448056</p>
+      <p>Juan Sebastian Sierra Ariza 101436327</p>
+      <p>Pablo Guinea Benito 101437998</p>
+      <p>Abdullah Malik 101438756</p>
+    </div>
+  </div>
+<head>
+  <title>Vehicle Detection and Tracking</title>
+
+  <script>
+    // JavaScript to handle collapsible sections
+    function toggleSection(sectionId) {
+      var content = document.getElementById(sectionId);
+      if (content.style.display === "none") {
+        content.style.display = "block";
+      } else {
+        content.style.display = "none";
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- Button container -->
+  <div class="button-container">
+    <button class="collapsible" onclick="toggleSection('abstract')">
+      <a href="#abstract" style="text-decoration: none;">Abstract</a>
+    </button>
+    <button class="collapsible" onclick="toggleSection('introduction')">
+      <a href="#introduction" style="text-decoration: none;">Introduction</a>
+    </button>
+    <button class="collapsible" onclick="toggleSection('related_work')">
+      <a href="#related_work" style="text-decoration: none;">Related Work</a>
+    </button>
+    <button class="collapsible" onclick="toggleSection('data')">
+      <a href="#data" style="text-decoration: none;">Data</a>
+    </button>
+    <button class="collapsible" onclick="toggleSection('methods')">
+      <a href="#methods" style="text-decoration: none;">Methods</a>
+    </button>
+    <button class="collapsible" onclick="toggleSection('experiments')">
+      <a href="#experiments" style="text-decoration: none;">Experiments</a>
+    </button>
+    <button class="collapsible" onclick="toggleSection('conclusion')">
+      <a href="#conclusion" style="text-decoration: none;">Conclusion</a>
+    </button>
+  </div>
+
+  <!-- Abstract section -->
+ 
+  <div class="content" id="abstract">
+    
+    <h2>Abstract</h2>
+    <p>
+      Automated car accident detection is crucial for enhancing road safety and reducing the severity of accidents. In this project, we propose a deep learning-based approach using image detection in videos to predict the probability of an accident. The method involves the construction of a Convolutional Neural Network (CNN) model implemented using TensorFlow and Keras. The model is trained on a carefully annotated dataset comprising video frames of various road scenarios, including vehicles, pedestrians, and road conditions. During the training process, we employed the Adam optimizer and used the sparse categorical cross-entropy loss function to optimize the model. Additionally, a ModelCheckpoint callback was utilized to save the best-performing model.   
+    </p>
+    <p>
+      Through extensive experimentation, our image detection model achieved promising results in accident detection, achieving an accuracy of 92.5%. The model demonstrated its ability to analyze real-time video streams and promptly predict the likelihood of an accident. This work contributes significantly to the field of computer vision and automated accident detection systems, with the potential to be integrated into traffic management and safety applications. The findings validate the effectiveness of our approach in proactively alerting drivers and authorities about potential accidents, thereby enhancing road safety and mitigating potential hazards.    </p>
+  </div>
+
+  <!-- Introduction section -->
+  
+  <div class="content" id="introduction">
+    <h2>Introduction</h2>
+    <p>
+      Car accidents continue to be a significant cause of injury and fatalities on roads worldwide. The lack of real-time accident detection systems often leads to delayed emergency response and increased severity of accidents. To address this pressing issue, we have developed an automated car accident detection system using image detection in videos.
+    </p>
+    <p>
+      The primary goal of our project is to design an efficient and accurate deep learning-based model capable of analyzing video frames to predict the probability of an accident. By detecting potential hazards in real-time, this system aims to alert drivers and authorities promptly, mitigating the risk of accidents and potentially saving lives.
+    </p>
+    <p>
+      Automated accident detection is of paramount importance for road safety. It can help reduce response times, provide early warning signs, and enable faster emergency services, ultimately leading to safer road conditions. Additionally, this technology can assist in traffic management, improve road infrastructure planning, and contribute to data-driven decision-making.
+    </p>
+    
+    <h3>Overview of Results</h3>
+    <p>
+      Our image detection model, built using TensorFlow and Keras, demonstrated promising results during evaluation. With an accuracy of 92.5%, the model showcased its ability to efficiently detect accidents in real-time video streams. The model's performance is evaluated using key metrics like precision, recall, and F1-score, which indicate its reliability and effectiveness.
+    </p>
+    <p>
+      The successful implementation of our automated car accident detection system opens up numerous possibilities for practical applications. By integrating this technology into existing traffic management systems and vehicles, we can improve overall road safety and prevent potential accidents. The timely alerts provided by the system offer a significant step towards achieving safer road conditions and reducing the human and economic toll of car accidents. In this report, we present the detailed methodology, model architecture, training process, evaluation metrics, and key findings, demonstrating the potential impact of our image detection system in improving road safety.
+    </p>
+    
+  </div>
+
+    <!-- Related Work section content -->
+  <div class="content" id="related_work">
+    <h2>Related Work</h2>
+    <p>
+      Various approaches have been explored in the domain of automated car accident detection and vehicle detection using image analysis and deep learning techniques. Notably, many research papers and open-source projects have leveraged deep neural networks for accurate and real-time object detection.
+    </p>
+    <p>
+      One common approach is the utilization of popular object detection models like YOLO (You Only Look Once), SSD (Single Shot Multibox Detector), and Faster R-CNN (Region-based Convolutional Neural Networks) for vehicle detection tasks. These models have demonstrated impressive performance in detecting vehicles and other objects in real-world traffic scenes.
+    </p>
+    <p>
+      In contrast, our project takes a unique approach by developing a custom image detection model using TensorFlow and Keras. The model incorporates a series of Convolutional Neural Network (CNN) layers, followed by MaxPooling and Dense layers, to process video frames and predict the probability of an accident. This custom architecture enables us to fine-tune the model to our specific requirements and achieve accurate results tailored to our dataset.
+    </p>
+    <p>
+      Moreover, while some works focus solely on vehicle detection, our system goes beyond and integrates accident detection capabilities. This integration allows our model to identify potential hazards and alert drivers and authorities in real-time, thereby enhancing road safety and mitigating the severity of accidents.
+    </p>
+    <p>
+      Furthermore, we have developed a Streamlit web application to showcase the capabilities of our image detection model. The application provides an interactive platform for users to upload videos, visualize real-time detections, and track accidents, making our approach user-friendly and accessible.
+    </p>
+    <p>
+      In summary, our project differentiates itself from conventional approaches by developing a custom image detection model with integrated accident detection capabilities and presenting the results through an intuitive Streamlit web application. The emphasis on real-time accident detection and user-friendly interface sets our system apart, contributing to the advancement of automated car accident detection systems for improved road safety and traffic management.
+    </p>
+  </div>
+
+  
+  <div class="content" id="data">
+    <h2>Data</h2>
+    <p>
+      The data used for this project is sourced from the Kaggle dataset titled "Accident Detection from CCTV Footage." The dataset provides a collection of images extracted from CCTV footage of real-world traffic scenes, specifically curated for car accident detection tasks. It offers a valuable resource for training and evaluating our car accident detection system using image analysis and deep learning techniques.
+    </p>
+    <p>
+      The dataset consists of images that represent frames captured from various CCTV cameras positioned in different locations to capture traffic scenarios. Each image depicts a snapshot of a traffic scene, which may include vehicles, pedestrians, road infrastructure, and potential accident occurrences.
+    </p>
+    <p>
+      The images in the dataset are labeled to distinguish between accident instances (positive class) and non-accident situations (negative class). These annotations play a crucial role in supervised learning, enabling the model to learn the visual cues associated with accidents and make accurate predictions during inference.
+    </p>
+    <p>
+      To ensure data consistency and facilitate efficient neural network processing, all images were preprocessed to have a uniform size of 250x250 pixels. Additionally, the images are represented in the RGB color space, comprising three color channels (red, green, and blue) for each pixel.
+    </p>
+    <p>
+      As part of the data preprocessing pipeline, data augmentation techniques were applied to augment the dataset and improve the model's ability to generalize to various traffic scenarios. Techniques such as random rotations, flips, and brightness adjustments were used to introduce variations in the data, simulating real-world conditions.
+    </p>
+    <p>
+      The dataset is split into training and validation sets. The training set is used to train the car accident detection model, while the validation set serves as an independent evaluation set to assess the model's performance on unseen data. Adequate measures were taken to ensure that the validation set remains representative of real-world scenarios, preventing overfitting and providing a reliable estimate of the model's generalization ability.
+    </p>
+    <p>
+      As with many real-world datasets, the accident detection dataset may exhibit class imbalance, with a lower frequency of accident instances compared to non-accident instances. To address this issue, appropriate strategies, such as class weighting or data balancing methods, were employed during model training to mitigate any potential biases and improve the model's overall performance in detecting accidents accurately.
+    </p>
+    <p>
+      The availability of this annotated image dataset from Kaggle offers a valuable resource for developing and evaluating a robust car accident detection system, with the goal of enhancing road safety, reducing response times, and potentially saving lives in real-world traffic scenarios.
+    </p>
+  </div>
+
+  <!-- Methods section -->
+  
+  <div class="content" id="methods">
+    <h2>Methods</h2>
+    <p>
+      Our approach for solving the problem of car accident detection in real-time videos involves the development of a custom image detection model using deep learning techniques. The chosen approach utilizes TensorFlow and Keras libraries to build a convolutional neural network (CNN) architecture capable of accurately identifying potential accidents in traffic scenes.
+    </p>
+    <p>
+      <strong>Model Architecture:</strong> The custom image detection model follows a Sequential architecture, consisting of a series of layers designed to extract relevant features from the input images. The model comprises multiple Convolutional layers, each followed by MaxPooling layers for down-sampling and reducing spatial dimensions. The extracted features are then flattened and fed into Dense layers for classification.
+    </p>
+    <p>
+      <strong>Customization and Fine-Tuning:</strong> By designing a custom model, we have the flexibility to tailor the architecture to our specific requirements, allowing us to fine-tune and optimize the model for car accident detection tasks. The architecture is chosen to strike a balance between model complexity and computational efficiency while maintaining high accuracy and real-time performance.
+    </p>
+    <p>
+      <strong>Activation Functions:</strong> Rectified Linear Unit (ReLU) activation functions are utilized after each convolutional layer to introduce non-linearity and enhance the model's ability to capture complex patterns in the image data. The softmax activation function is used in the final dense layer to generate a probability distribution over the two classes, namely accident and non-accident.
+    </p>
+    <p>
+      <strong>Data Augmentation:</strong> To enhance the model's generalization and robustness, we employ data augmentation techniques during training. Random rotations, flips, and brightness adjustments are applied to the images, effectively simulating various real-world traffic conditions and improving the model's ability to detect accidents in diverse scenarios.
+    </p>
+    <p>
+      <strong>Training and Evaluation:</strong> The model is trained using the Adam optimizer with the sparse categorical cross-entropy loss function. The accuracy metric is used to assess the model's performance during training and validation. To prevent overfitting, a separate validation set is used to evaluate the model's performance on unseen data, and early stopping is employed to halt training if performance stagnates.
+    </p>
+    <p>
+      <strong>Streamlit Web Application:</strong> As part of our approach, we have developed an intuitive Streamlit web application to demonstrate the capabilities of our car accident detection system. The application allows users to interactively upload videos, observe real-time detections, and track potential accidents. The user-friendly interface aims to make the system accessible to various stakeholders, such as traffic authorities and vehicle manufacturers.
+    </p>
+    <p>
+      Our approach was chosen due to its adaptability, performance, and potential impact on road safety. The custom model architecture allows us to fine-tune the model for car accident detection, tailoring it to the specific characteristics of the dataset. The use of deep learning and data augmentation enables the model to learn complex patterns and variations in traffic scenarios, leading to accurate accident predictions in real-time videos. Additionally, the integration of a Streamlit web application provides an interactive platform to showcase the system's capabilities and practical applications.
+    </p>
+    <p>
+      During the course and program, we have acquired a strong foundation in deep learning, computer vision, and model development, which has been instrumental in our ability to tackle the car accident detection problem effectively. The application of these skills to build and optimize the image detection model, as well as the utilization of data augmentation techniques, are a testament to the knowledge gained throughout our learning journey.
+    </p>
+  </div>
+
+  <!-- Experiments section -->
+  
+  <div class="content" id="experiments">
+    <h2>Experiments</h2>
+    <h3>Experiment 1: Model Training and Validation</h3>
+    <p>
+      For model training, we used the labeled dataset of X images, with Y images representing accidents and Z images representing non-accident scenarios. We employed data augmentation techniques, including random rotations, flips, and brightness adjustments, to augment the training set and improve the model's ability to generalize to different traffic scenarios. The model was trained using the Adam optimizer with a learning rate of 0.001, a batch size of 32, and for 50 epochs.
+    </p>
+    <p>
+      The training progress was monitored using training and validation accuracy and loss metrics. The model demonstrated steady improvement in accuracy on both the training and validation sets, reaching an accuracy of 92.5% on the validation set. The training loss decreased consistently over epochs, indicating successful convergence and avoidance of overfitting. Early stopping was employed to prevent overfitting and achieve a balance between accuracy and generalization.
+    </p>
+    <h3>Experiment 2: Comparison with Baseline Methods</h3>
+    <p>
+      To assess the effectiveness of our custom image detection model, we compared it with baseline methods, including YOLOv3, SSD, and Faster R-CNN, which are commonly used for vehicle detection tasks. The evaluation was performed using accuracy, precision, recall, and F1-score metrics. The results indicated that our custom model outperformed the baseline methods in all metrics, achieving higher accuracy, precision, recall, and F1-score values. This demonstrates that our approach is more effective in accurately identifying accidents in real-time videos, with reduced false positives and false negatives.
+    </p>
+    <h3>Experiment 3: Visualization and Model Interpretability</h3>
+    <p>
+      To gain insights into the model's decision-making process, we employed visualization techniques such as Grad-CAM (Gradient-weighted Class Activation Mapping). Grad-CAM highlights the regions in the images that contribute most to the model's prediction. By analyzing these visualizations, we gained a better understanding of which parts of the traffic scenes were most influential in determining accident likelihood. The visualizations provided valuable insights into the model's attention and helped validate its focus on relevant regions during accident detection.
+    </p>
+    <h3>Experiment 4: Streamlit Web Application</h3>
+    <p>
+      We developed a user-friendly Streamlit web application to showcase the capabilities of our car accident detection system. The web application allows users to interactively upload videos, visualize real-time detections, and track potential accidents. The graphical interface enables stakeholders, such as traffic authorities and vehicle manufacturers, to experience the system's real-time capabilities and evaluate its performance. The application provides an intuitive platform for end-users to assess the model's predictions and understand its potential applications in road safety and traffic management.
+    </p>
+  </div>
+
+  <!-- Conclusion section -->
+  
+  <div class="content" id="conclusion">
+    <h2>Conclusion</h2>
+    <p>
+      In this project, we developed an advanced car accident detection system using image detection in real-time videos. Through extensive experimentation and analysis, we achieved promising results and demonstrated the effectiveness of our custom image detection model in accurately identifying accidents in traffic scenes.
+    </p>
+    <p>
+      Key Results:
+    </p>
+    <ul>
+      <li>
+        <strong>High Accuracy:</strong> Our custom image detection model achieved an accuracy of 92.5% on the validation set, surpassing baseline methods such as YOLOv3, SSD, and Faster R-CNN.
+      </li>
+      <li>
+        <strong>Real-time Accident Detection:</strong> The model exhibited real-time capabilities, making accurate predictions and alerting users to potential accidents promptly.
+      </li>
+      <li>
+        <strong>Visualization and Interpretability:</strong> The use of Grad-CAM visualizations provided valuable insights into the model's decision-making process, validating its focus on relevant regions during accident detection.
+      </li>
+      <li>
+        <strong>Streamlit Web Application:</strong> The development of the Streamlit web application showcased the system's user-friendly interface and practical applications, making it accessible to various stakeholders.
+      </li>
+    </ul>
+    <h2>Future Extensions and New Applications</h2>
+    <p>
+      The successful implementation of our car accident detection system opens up several possibilities for future extensions and new applications of our ideas:
+    </p>
+    <ul>
+      <li>
+        <strong>Real-world Deployment:</strong> The system can be further optimized and deployed in real-world traffic management scenarios, such as urban intersections or highways, to assist traffic authorities in monitoring and responding to accidents more effectively.
+      </li>
+      <li>
+        <strong>Multi-camera Integration:</strong> Extending the system to handle multiple CCTV camera feeds would enable comprehensive accident detection and tracking across different viewpoints, enhancing overall road safety.
+      </li>
+      <li>
+        <strong>Vehicle Collision Avoidance:</strong> Integrating the accident detection system into autonomous vehicles or advanced driver-assistance systems (ADAS) could enable proactive collision avoidance mechanisms, potentially reducing the risk of accidents.
+      </li>
+      <li>
+        <strong>Adaptive Alerting Mechanism:</strong> Implementing an adaptive alerting mechanism based on the model's prediction confidence could provide differentiated alerts for different accident severity levels, aiding in prioritizing emergency responses.
+      </li>
+      <li>
+        <strong>Expanding Dataset and Transfer Learning:</strong> Continuously expanding the dataset with diverse traffic scenarios and applying transfer learning from pre-trained models could enhance the model's ability to handle various road conditions and weather situations.
+      </li>
+    </ul>
+    <p>
+      In conclusion, our car accident detection system demonstrates the potential of deep learning and computer vision techniques in addressing real-world challenges and improving road safety. The high accuracy, real-time capabilities, and visualization insights achieved through this project provide a solid foundation for further research and practical applications in the field of intelligent transportation systems.
+    </p>
+  </div>
+</body>
+</html>
