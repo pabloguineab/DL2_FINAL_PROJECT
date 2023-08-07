@@ -24,19 +24,24 @@ To deploy the Streamlit application on your local machine, please follow these s
 
 1. **Clone the Repository**: 
 
-git clone https://github.com/pabloguineab/DL2_FINAL_PROJECT.git
-
+   ```bash
+   `git clone https://github.com/pabloguineab/DL2_FINAL_PROJECT.git`
 
 2. **Install the Requirements**: 
 Navigate to the project folder and install the necessary dependencies.
 
-3. **Download and Prepare the Dataset**: 
+`cd DL2_FINAL_PROJECT`
+`pip install -r requirements.txt`
+
+4. **Download and Prepare the Dataset**: 
 You can download the required dataset from [this link on Kaggle](https://www.kaggle.com/datasets/ckay16/accident-detection-from-cctv-footage) and place it in the project folder.
 
-4. **Generate the CNN Model**:
+5. **Generate the CNN Model**:
 Run the `accident_classify.ipynb` notebook to generate the `.h5` file, which represents the CNN model.
+`jupyter notebook accident_classify.ipynb`
 
-5. **Run the Streamlit Application**:
+6. **Run the Streamlit Application**:
 You can now run the application using either `app.py` or `streamlit_cloud.py`.
+`streamlit run app.py`
 
 For any issues or additional information, please refer to the documentation within the project or raise an issue on the GitHub page.
